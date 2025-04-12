@@ -6,11 +6,12 @@ async function bootstrap() {
 
   // Enable CORS
   app.enableCors({
-    origin: 'https://task.karthikeyanm.tech', // your frontend origin
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: 'Content-Type, x-api-key',
+    origin: ['https://task.karthikeyanm.tech', 'http://localhost:3000',],
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'x-api-key'],
     credentials: true,
   });
+  
 
   await app.listen(process.env.PORT || 3000);
   
