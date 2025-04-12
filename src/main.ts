@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // Enable CORS
   app.enableCors({
-    origin: ['http://localhost:3000','https://job-admin-frontend-weld.vercel.app/'], // your frontend origin
+    origin: ['http://localhost:3000','https://job-admin-frontend-weld.vercel.app'], // your frontend origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, x-api-key',
     credentials: true,
