@@ -1,0 +1,42 @@
+import { PrismaService } from "prisma/prisma.service";
+import { CreateJobDto } from "./dto/create-job.dto";
+export declare class JobsService {
+    private prisma;
+    constructor(prisma: PrismaService);
+    createJob(data: CreateJobDto): Promise<{
+        id: number;
+        jobTitle: string;
+        companyName: string;
+        location: string;
+        jobType: import(".prisma/client").$Enums.JobType;
+        salaryStart: number;
+        salaryEnd: number;
+        applicationDeadline: Date;
+        jobDescription: string;
+        createdAt: Date;
+    }>;
+    getAllJobs(): Promise<{
+        id: number;
+        jobTitle: string;
+        companyName: string;
+        location: string;
+        jobType: import(".prisma/client").$Enums.JobType;
+        salaryStart: number;
+        salaryEnd: number;
+        applicationDeadline: Date;
+        jobDescription: string;
+        createdAt: Date;
+    }[]>;
+    deleteJobById(id: number): Promise<{
+        id: number;
+        jobTitle: string;
+        companyName: string;
+        location: string;
+        jobType: import(".prisma/client").$Enums.JobType;
+        salaryStart: number;
+        salaryEnd: number;
+        applicationDeadline: Date;
+        jobDescription: string;
+        createdAt: Date;
+    }>;
+}
