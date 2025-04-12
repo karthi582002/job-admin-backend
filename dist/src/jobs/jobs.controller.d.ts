@@ -4,7 +4,6 @@ export declare class JobsController {
     private readonly jobsService;
     constructor(jobsService: JobsService);
     create(dto: CreateJobDto): Promise<{
-        id: number;
         jobTitle: string;
         companyName: string;
         location: string;
@@ -13,10 +12,10 @@ export declare class JobsController {
         salaryEnd: number;
         applicationDeadline: Date;
         jobDescription: string;
+        id: number;
         createdAt: Date;
     }>;
     findAll(): Promise<{
-        id: number;
         jobTitle: string;
         companyName: string;
         location: string;
@@ -25,10 +24,10 @@ export declare class JobsController {
         salaryEnd: number;
         applicationDeadline: Date;
         jobDescription: string;
+        id: number;
         createdAt: Date;
     }[]>;
     deleteJob(id: number): Promise<{
-        id: number;
         jobTitle: string;
         companyName: string;
         location: string;
@@ -37,6 +36,7 @@ export declare class JobsController {
         salaryEnd: number;
         applicationDeadline: Date;
         jobDescription: string;
+        id: number;
         createdAt: Date;
     }>;
 }

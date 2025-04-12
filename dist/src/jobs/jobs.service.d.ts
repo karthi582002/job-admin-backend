@@ -4,7 +4,6 @@ export declare class JobsService {
     private prisma;
     constructor(prisma: PrismaService);
     createJob(data: CreateJobDto): Promise<{
-        id: number;
         jobTitle: string;
         companyName: string;
         location: string;
@@ -13,10 +12,10 @@ export declare class JobsService {
         salaryEnd: number;
         applicationDeadline: Date;
         jobDescription: string;
+        id: number;
         createdAt: Date;
     }>;
     getAllJobs(): Promise<{
-        id: number;
         jobTitle: string;
         companyName: string;
         location: string;
@@ -25,10 +24,10 @@ export declare class JobsService {
         salaryEnd: number;
         applicationDeadline: Date;
         jobDescription: string;
+        id: number;
         createdAt: Date;
     }[]>;
     deleteJobById(id: number): Promise<{
-        id: number;
         jobTitle: string;
         companyName: string;
         location: string;
@@ -37,6 +36,7 @@ export declare class JobsService {
         salaryEnd: number;
         applicationDeadline: Date;
         jobDescription: string;
+        id: number;
         createdAt: Date;
     }>;
 }
